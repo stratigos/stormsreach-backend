@@ -16,12 +16,11 @@ gem 'pg'
 gem 'puma', '~> 3.7'
 
 # Application dependencies
-
+gem 'bcrypt', '~> 3.1.7' # Use ActiveModel has_secure_password
+gem 'bootstrap_sb_admin_base_v1', '~> 0.1.0' # admin / CMS theme
 gem 'sass-rails', '~> 5.0' # SCSS stylesheets
 gem 'uglifier', '>= 1.3.0' # compress JS assets
-# See https://github.com/rails/execjs#readme for more supported JS runtimes
-# gem 'therubyracer', platforms: :ruby
-gem 'bcrypt', '~> 3.1.7' # Use ActiveModel has_secure_password
+# gem 'therubyracer', platforms: :ruby # JS runtime
 
 # Environment specific dependencies
 
