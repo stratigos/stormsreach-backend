@@ -14,6 +14,14 @@
     <div id="wrapper" class="">
       <%= render "admin/shared/nav" %>
     </div>
-    <%= yield %>
+    <div class="content-wrapper">
+      <div class="container-fluid">
+        <%= yield(:breadcrumbs) if content_for?(:breadcrumbs) %>
+        <%= yield %>
+        <%= render "admin/shared/footer" %>
+        <%= render "admin/shared/logout_modal" %>
+      </div>
+    </div>
+
   </body>
 </html>
