@@ -6,11 +6,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <%= stylesheet_link_tag    'admin/admin_application', media: 'all' %>
-    <%= javascript_include_tag 'admin/admin_application' %>
+    <%= stylesheet_link_tag    "admin/admin_application", media: "all" %>
+    <%= javascript_include_tag "admin/admin_application" %>
   </head>
 
-  <body>
+  <body class="fixed-nav sticky-footer bg-dark" id="page-top">
+    <div id="wrapper" class="">
+      <%= render "admin/shared/nav" %>
+    </div>
     <%= yield %>
   </body>
 </html>

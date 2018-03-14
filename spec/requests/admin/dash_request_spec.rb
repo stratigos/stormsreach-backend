@@ -1,10 +1,10 @@
-require 'rails_helper'
+require "rails_helper"
 
-RSpec.describe 'Admin Dash Requests', type: :request do
+RSpec.describe "Admin Dash Requests", type: :request do
 
-  describe 'GET /admin' do
-    context 'administration module root path' do
-      it 'renders dashboard content' do
+  describe "GET /admin" do
+    context "administration module root path" do
+      it "renders dashboard content" do
         get admin_root_path, params: {}
 
         expect(response.body).to match(/StormsReach/)
