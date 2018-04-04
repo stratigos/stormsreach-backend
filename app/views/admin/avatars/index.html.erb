@@ -1,0 +1,17 @@
+<div>
+  <div>
+    <h1>Avatars</h1>
+  </div>
+  <div>
+    <ul>
+      <% @avatars.each do |avatar| %>
+        <li>
+          ID: <%= avatar.id %> | Name: <%= avatar.name %> | Town: <%= avatar.town %> |
+          <%= link_to "Edit", edit_admin_avatar_path(avatar) %> |
+          <%= link_to "Delete", admin_avatar_path(avatar), method: :delete,
+            data: { confirm: "Are you sure you want to delete #{avatar.name}?" } %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

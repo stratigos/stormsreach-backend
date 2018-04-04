@@ -1,0 +1,4 @@
+en:
+  admin:
+    crud:
+      successful_model_save: "%{model_name} saved!"

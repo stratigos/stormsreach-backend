@@ -1,0 +1,14 @@
+<%= form_for([:admin, @avatar]) do |f| %>
+  <%= render partial: "admin/shared/errors", locals: { model: @avatar } %>
+  <div>
+    <%= f.label :name %><br>
+    <%= f.text_field :name, required: true %>
+  </div>
+  <div>
+    <%= f.label :town %><br>
+    <%= f.text_field :town, required: true %>
+  </div>
+  <div>
+    <%= f.submit "Save Avatar" %>
+  </div>
+<% end %>
