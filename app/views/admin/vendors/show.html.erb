@@ -1,0 +1,17 @@
+<div class="show-avatar">
+  <ul>
+    <li>
+      Name: <%= @vendor.name %>
+    </li>
+    <li>
+      Town: <%= @vendor.town %>
+    </li>
+    <li>
+      Description: <%= @vendor.description %>
+    </li>
+  </ul>
+</div>
+
+<div class="crud-index">
+  <%= link_to "Vendors Index", admin_vendors_path %> | <%= link_to "Avatars Index", admin_avatars_path %>
+</div>

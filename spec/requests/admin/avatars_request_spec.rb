@@ -13,6 +13,15 @@ RSpec.describe "Admin Avatars Requests", type: :request do
     end
   end
 
+  describe "GET /admin/avatars/new" do
+    it "responds with the create new Avatar page" do
+      get new_admin_avatar_path
+
+      expect(response.body).to match(/Create Avatar/)
+      expect(response.status).to eq(200)
+    end
+  end
+
   describe "POST /admin/avatars" do
     context "with whitelisted params" do
       it "responds with redirect to show page" do
