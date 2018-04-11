@@ -1,0 +1,46 @@
+<%= form_for [:admin, @avatar, @vendor] do |f| %>
+
+  <%= render partial: "admin/shared/errors", locals: { model: @vendor } %>
+
+  <div class="form-group row">
+    <div class="col-md-1 col-form-label">
+      <%= f.label :name, class: "pull-right" %>
+    </div>
+    <div class="col-md-4">
+      <%= f.text_field :name, required: true, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-md-1 col-form-label">
+      <%= f.label :town, class: "pull-right" %>
+    </div>
+    <div class="col-md-4">
+      <%= f.text_field :town, required: true, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-md-1 col-form-label">
+      <%= f.label :description, class: "pull-right" %>
+    </div>
+    <div class="col-md-4">
+      <%= f.text_area :description, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-md-5">
+      <%= f.submit "Save Vendor", class: "btn btn-lg btn-primary btn-block" %>
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-5">
+      <%=
+        link_to(
+          "View Avatar", admin_avatar_path(f.object.avatar), class: "btn btn-lg btn-info btn-block"
+        ) if f.object.persisted?
+      %>
+    </div>
+  </div>
+
+<% end %>

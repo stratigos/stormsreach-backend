@@ -25,6 +25,11 @@
           admin_avatars_path, class: "nav-link" %>
       </li>
 
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Manage Vendors">
+        <%= link_to '<i class="fa fa-money"></i> <span class="nav-link-text">Vendors</span>'.html_safe,
+          admin_vendors_path, class: "nav-link" %>
+      </li>
+
       <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
         <a class="nav-link" href="charts.html">
           <i class="fa fa-fw fa-area-chart"></i>
