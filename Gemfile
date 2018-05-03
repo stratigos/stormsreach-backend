@@ -16,6 +16,7 @@ gem "pg"
 gem "puma", "~> 3.7"
 
 # Application dependencies
+gem "active_model_serializers", "~> 0.10.7"
 gem "bcrypt", "~> 3.1.7" # Use ActiveModel has_secure_password
 gem "bootstrap_sb_admin_base_v1", "~> 0.1.0" # admin / CMS theme
 gem "sass-rails", "~> 5.0" # SCSS stylesheets

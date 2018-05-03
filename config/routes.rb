@@ -11,4 +11,10 @@ Rails.application.routes.draw do
     root controller: :dash, action: :index
   end
 
+  scope module: :api do
+    namespace :v1 do
+      resources :avatars, only: [:index]
+    end
+  end
+
 end

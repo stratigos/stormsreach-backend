@@ -1,0 +1,4 @@
+en:
+  api:
+    errors:
+      resource_not_found_generic: "This resource does not exist. "
